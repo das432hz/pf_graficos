@@ -30,7 +30,7 @@ export class Ball {
     render() {
         // ball
         const ballGeometry = new THREE.SphereGeometry(0.5, 32, 16);
-        const ballMaterial = new THREE.MeshBasicMaterial({ color: 0xf6ff82 });
+        const ballMaterial = new THREE.MeshBasicMaterial({ color: 0x9333FF });
         this.model = new THREE.Mesh(ballGeometry, ballMaterial);
         this.model.position.set(this.x, this.y, this.z);
         this.scene.add(this.model);
