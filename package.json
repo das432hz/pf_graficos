@@ -1,5 +1,5 @@
 {
-    "name": "tennis",
+    "name": "pf_graficos",
     "private": true,
     "version": "0.0.0",
     "scripts": {
@@ -15,5 +15,5 @@
     "dependencies": {
         "three": "^0.142.0"
     },
-    "homepage": "https://das432hz.github.io/tennis"
+    "homepage": "https://das432hz.github.io/pf_graficos"
 }
