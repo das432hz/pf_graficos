@@ -4,7 +4,7 @@ export class SceneManager {
     constructor() {
         // scene
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color(0xa7e677);
+        this.scene.background = new THREE.Color(0x000000);
 
         // camera
         this.camera = new THREE.OrthographicCamera(window.innerWidth / -30, window.innerWidth / 30, 
