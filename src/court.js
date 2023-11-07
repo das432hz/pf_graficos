@@ -9,14 +9,14 @@ export class Court {
     }
 
     render() {
-        // white base to form lines
+
         const baseGeometry = new THREE.PlaneGeometry(L, W);
-        const lineMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide });
+        const lineMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00, side: THREE.DoubleSide });
         const base = new THREE.Mesh(baseGeometry, lineMaterial);
         base.rotateX(Math.PI / 2);
         this.scene.add(base);
         
-        // render green field above the white base
+
         const field = [];
         const fieldMaterial = new THREE.MeshBasicMaterial({ color: 0xc1f7b9, side: THREE.DoubleSide });
 
@@ -27,7 +27,7 @@ export class Court {
         const leftMid = new THREE.Mesh(new THREE.PlaneGeometry(29, 16.25), fieldMaterial);
         const rightMid = new THREE.Mesh(new THREE.PlaneGeometry(29, 16.25), fieldMaterial);
         
-        // magic numbers
+  
         leftEdge.position.set(0, 0.01, 20);
         rightEdge.position.set(0, 0.01, -20);
         bottomEdge.position.set(25, 0.01, 0);
