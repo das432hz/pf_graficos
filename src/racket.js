@@ -13,9 +13,8 @@ export class Racket {
         this.model = undefined;
         this.shadow = undefined;
         this.boundingBox = undefined;
-        // this.helper = undefined;
 
-        // player is 1 or -1 so certain values can be inverted
+
         this.player = player;
         this.controls = controls;
 
@@ -65,7 +64,7 @@ export class Racket {
         this.charge++;
         this.charging = true;
 
-        // check whether the ball will end up to the left or right of the current position
+
         let t = Math.abs((ball.x - this.x) / ball.dx);
         let z = ball.dz * t;
 
@@ -137,9 +136,7 @@ export class Racket {
         ball.dx = this.player * -Math.min(Math.abs(this.rotation.y) * 0.2, 0.8) * Math.random(1.0, 1.5);
         ball.dz = this.rotation.y * -0.08 * Math.random(0.10, 0.12) * (Math.random() > 0.3 ? 1 : -1);
         ball.dy = Math.min(Math.abs(this.rotation.x) * 0.2, 0.03);
-        // ball.dx = this.player * -Math.min(Math.abs(this.rotation.y) * 5, 0.8) * Math.random(1.0, 1.5);
-        // ball.dz = this.rotation.y * -0.8 * Math.random(1.0, 1.2) * (Math.random() > 0.3 ? 1 : -1);
-        // ball.dy = Math.min(Math.abs(this.rotation.x) * 3, 0.3);
+
 
         // spin
         if (this.charge > 200) 
@@ -175,7 +172,7 @@ export class Racket {
         this.rotation.y *= 0.8;
         this.rotation.z *= 0.8;
 
-        // read keyboard input
+
         if (keyboard[this.controls.up]) this.dx += -0.008;
         if (keyboard[this.controls.left]) this.dz += 0.008;
         if (keyboard[this.controls.down]) this.dx += 0.008;
