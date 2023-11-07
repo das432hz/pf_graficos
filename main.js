@@ -33,15 +33,15 @@ ball.render();
 player1.render();
 player2.render();
 
-// handle resize
+
 window.addEventListener("resize", e => sm.resize(), false);
 
-// handle inputs
+
 let keyboard = {};
 document.addEventListener("keydown", e => keyboard[e.key] = true );
 document.addEventListener("keyup", e => keyboard[e.key] = false );
 
-// reset
+
 function reset() {
     ball.serve(1);
     ball.score = [0, 0];
