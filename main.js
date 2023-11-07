@@ -75,7 +75,7 @@ function reset() {
     player2.swinging = false;
 }
 
-// animation loop
+
 let t0 = 0;
 
 function animate(timestamp) {
